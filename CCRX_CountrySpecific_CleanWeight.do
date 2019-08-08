@@ -78,7 +78,7 @@ replace `var'=1 if assets_`y'=="`var'"
 drop assets_*
 
 *Livestock
-foreach x in cows_bulls horses goats sheep chickens pigs {
+foreach x in cows_bulls horses sheep chickens pigs {
 capture rename owned_`x'* `x'_owned
 capture label var `x'_owned 			"Total number of `x' owned"
 destring `x'_owned, replace
